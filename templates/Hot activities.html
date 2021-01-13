@@ -1,0 +1,64 @@
+<!doctype html>
+<html dir="rtl">
+    <head>
+        <title>Activity page</title>
+        <link rel="Stylesheet" href="{{ url_for('static', filename='css/Hot activities.css')}}">
+        <script src="{{ url_for('static', filename='js/HoverJS.js')}}"></script>
+
+    </head>
+    <body>
+       
+            <div class="grid-container">
+            {% include 'header.html' %}
+
+            <div class="text1">
+            <h1 style="color: #170b80e0;"> קנית כיסא גלגל חשמלי  </h1>
+            <pre>
+ אנו צריכים לאסוף סכום עד 14000 ש.ח 
+על מנת לקנות כיסא גלגל חשמלי לילד נמצא 
+ בבית והוא זקוק לכיסא כזה<br>
+                <strong style="color: #170b80e0;"> עד תאריך 30 ביונואר2021  </strong>
+            </Pre><br><br>
+
+             <h2 style="color: #170b80e0;">נשאר סכום של:</h2> <span>14000</span>
+            </div>
+                
+           <div class="iframe"><iframe width="540" height="250" src="{{ url_for('timer') }}" frameborder="0"></iframe></div>
+           <div class="botom" onmouseover="bgchange5(this)" onmouseout="bgnormal5(this)">
+             <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" id="" href="credit_card.html"> לתרומה מאובטחת </a>
+           </div>
+
+           <div class="text2">
+           <h1 style="color: #170b80e0;"> טיול לצפון   </h1>
+           <pre>
+ אנו צריכים לאסוף סכום עד 4000 ש.ח 
+ על מנת לקנות ציוד  ליום כיף בצפון 
+ולישון לילה במלון בחיפה <br>  
+      <strong style="color: #170b80e0;"> עד תאריך 10 ביונואר2021  </strong>
+                    </Pre><br><br>
+                    <h2 style="color: #170b80e0;">נשאר סכום של:</h2> <span>4000</span>
+                </div>
+
+           <div class="iframe2"><iframe width="540" height="250" src="{{ url_for('timer') }}" frameborder="0"></iframe></div>
+           <div class="botom2" onmouseover="bgchange5(this)" onmouseout="bgnormal5(this)">
+           <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" id="" href="credit_card.html"> לתרומה מאובטחת </a>
+           </div>
+
+           <div class="text3">
+           <h1 style="color: #170b80e0;"> קנית כיסא גלגל חשמלי  </h1>
+           <pre>
+ אנו צריכים לאסוף סכום עד 14000 ש.ח 
+על מנת לקנות כיסא גלגל חשמלי לילד נמצא 
+ בבית והוא זקוק לכיסא כזה<br>  
+      <strong style="color: #170b80e0;"> עד תאריך 30 ביונואר2021  </strong>
+           </Pre><br><br>
+            <h2 style="color: #170b80e0;">נשאר סכום של:</h2> <span>6000</span>
+           </div>
+                
+           <div class="iframe3"><iframe width="540" height="250" src="{{ url_for('timer') }}" frameborder="0"></iframe></div>
+           <div class="botom3" onmouseover="bgchange5(this)" onmouseout="bgnormal5(this)">
+           <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" id="" href="credit_card.html"> לתרומה מאובטחת </a>
+           </div>
+        </div>
+    </body>
+</html>

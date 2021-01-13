@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html dir="rtl">
+    <meta charset="UTF-8">
+    <title>pay</title>
+    <link rel="Stylesheet" href="{{ url_for('static', filename='css/credit_card.css')}}">
+	<script src="creditcard.js"></script>
+    <head>
+    <body >
+       <div class="contact-box"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <h1>לתשלום</h1>
+        <div id="error_message"></div>
+        <form id="myform" onsubmit="return validate();">
+
+        <div class="radio">
+        <h2> פרטי תרומה</h2><br>
+        <input class="custom-input" name="selectitem" type="radio" >        תרומה חד פעמית
+        <input class="custom-input" name="selectitem" type="radio" >    רומה חודשית מתחדשת (הו"ק)
+        </div>
+
+        <div class="cost">
+        <label class="donators" >סכום תרומה *</label>
+        <input class="input" type="text" id="cost" placeholder="סכום תרומה"  >
+        </div><br><hr><br>
+
+        <div class="txtb" >
+        <label class="label">שם פרטי</label>
+        <input type="text" id="firstname" placeholder="הכנס שם פרטי " class="input">
+        </div>
+
+        <div class="txtb" >
+        <label class="label">שם משפחה</label>
+        <input type="text" id="lastName" placeholder="הכנס שם משפחה " class="input">
+        </div>
+
+        <div class="txtb" >
+        <label for="כתובת אימייל" class="label">כתובת אימייל</label>
+        <input type="text" id="email" placeholder="הכנס אימייל  " class="input">    
+        </div>
+
+        <div class="txtb" >
+        <label for="מס' טלפון נייד"class="label">מס' טלפון נייז</label>
+        <input type="text" id="phone" placeholder="מס' טלפון נייד"class="input">
+        </div>
+
+        <div class="txtb">
+        <label class="label">הערות</label>
+        <textarea class="textarea" cols="20" rows="2"></textarea>
+        </div><br><hr><br>
+
+        <h4>פרטי כרטיס אשראי</h4>
+        <div class="txtb" >
+        <label class="label">שם בעל/ת הכרטיס *</label>
+        <input class="input" type="text" id="myname" placeholder="הכנס שם בעל/ת הכרטיס " >
+        </div>
+
+        <div class="txtb" >
+        <label class="label">מספר הכרטיס * </label>
+        <input  class="input" type="text" id="creditcard" placeholder="מספר הכרטיס" >
+        </div>
+
+        <div class="txtb1">
+        <label class="label"  >תוקף הכרטיס *</label>
+        <p style="    color: #808000 ; font-size: 16px;font-weight: bolder; text-align: right;"> שנה</p>
+        <select class="select" >
+        <option value="">2021</option>
+        <option value="">2022</option>
+        <option value="">2023</option>
+        <option value="">2024</option>
+        <option value="">2025</option>
+        <option value="">2026</option>
+        <option value="">2027</option>
+        <option value="">2028</option>
+        <option value="">2029</option>
+        <option value="">2030</option>
+        <option value="">2031</option>
+    </select>
+        <p style="    color: #808000 ; font-size: 16px;font-weight: bolder; text-align: right;">חודש</p>
+        <select class="select" >
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+
+    </select>
+         </div>
+
+         <div class="txtb">
+         <label class="label" > 3 ספרות בגב הכרטיס *</label>
+         <input class="input" type="text" id="ccv" placeholder="3 ספרות בגב הכרטיס " >
+         </div>
+
+         <div class="txtb">
+         <label class="label"> ת.ז. בעל/ת כרטיס *</label>
+         <input class="input" type="text" id="id" placeholder="ת.ז. בעל/ת כרטיס " >
+         </div>
+
+         <div class="btn" ><input type="submit"></div>
+         <div class="botom1"><a class="a" href="{{ url_for('Donators') }}">חזרה </a></div>
+
+         </form>
+         </div>
+</body>
+</html>
+
