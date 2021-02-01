@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'activity' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('activity.static', filename='css/activity.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+            <div class="grid-container">
+             {% include 'header.html' %}
+
+             <div class="img"><br><img src="{{ url_for('activity.static', filename='media/program1.jpg')}}" alt="" width="auto" height="300"></div>
+
+             <div class="text1"> <br><br><br><br><br>
+             <h1>קבוצות סוף שבוע</h1>
+                תכנית הנוער מבוססת על קבוצה גרעינית שבה חברים 15-18 חניכים ואיתם<br>
+                מספר זהה של מדריכים מתנדבים. התכנית מתחילה בגילאי 8-10 ונמשכת<br>
+                כעשר שנים עד הגיעם לגיל 21.<br>
+                תקופת הפעילות הארוכה והרציפה של התכנית ייחודית לבית הגלגלים<br>
+                מאפשרת לקבוצה ולחברים כפרטים, לעבור תהליך משותף וארוך טווח. בכל<br>
+                אחד מהבתים יש 5-7 קבוצות, וקבוצה חדשה נפתחת אחת לשנתיים .<br>
+                הקבוצות נפגשות לסוף שבוע אחת לכמה שבועות ובמפגשים אלו החניכים<br>
+                נהנים מבילוי ופעילויות חברתיות באווירה של בית ומשפחה. החניכים<br>
+                מתמודדים עם שאלות המעסיקות את בני גילם. המפגשים מעשירים את<br>
+                עולמם, מחזקים את הקשרים ומעצימים את יכולותיהם.<br>
+                יתרון נוסף ולא פחות חשוב הוא שמשפחותיהם זוכות לסוף שבוע של מנוחה,<br>
+                בידיעה שילדיהם נמצאים בידיים בטוחות ומבלים בחברה תומכת, מחבקת ומקדמת.<br>
+                <br>
+            </div>
+             <div class="text2"> <br><br><br><br><br><br>
+            <h1>מחנות קיץ</h1>
+                שיא הפעילות השנתית מתקיימת בחודשי הקיץ בהם יוצאת כל קבוצתם<br>
+                סופשבוע למחנה  בן  5 ימים רצופים בהם חווים החניכים פעילויות מהנות<br>
+                ומרגשות ככל ילד בן גילם, הכוללים לינה מחוץ לבית ופעילות מאתגרת כגון.<br>
+                שייט קיאקים בצפון, סנפלינג בדרום, טיולים, התנדבות בקהילה ועוד המון<br>
+                פעילויות מגוונות ומאתגרות<br>
+                <br>
+            </div>
+             <div class="text3"> <br><br><br>
+            <h1>חוגים </h1>
+                במהלך השבוע מתקיימים מגוון פעילויות וחוגים לילדים ובני נוער עם מוגבלות<br>
+                פיזית. הפעילויות קבועות לאורך כל השנה ובהן: חוגי אילוף כלבים, מוזיקה<br>
+                צילום, מחשבים, בישול, ועוד<br>
+
+                <br>
+            </div>
+             <div class="text4"> <br><br><br>
+             <h1>מתגלגלים קדימה</h1>
+                מתגלגלים קדימה היא תכנית מנהיגות ייחודית לנוער בגילאי 14-19 וממוקדת<br>
+                בהכנה לסיום הלימודים תוך רכישת כלים לניהול אורח חיים אוטונומי. התכנית<br>
+                כוללת הקניית כישורי חיים, העלאת תחושת המסוגלות העצמית, התנסות<br>
+                בשטח ותרגול לאוטונומיה. הפעילות מתקיימת על בסיס שבועי כשפעם עד<br>
+                פעמיים בחודש החניכים נשארים ללון בבית הגלגלים ובבוקר מגיעים ישירות<br>
+                לבית הספר עם ההסעות שמספקת העמותה. במהלך התכנית מתקיים סמינר<br>
+                ארצי לכל חניכי התכנית בעמותה, וכן נערך פרויקט שנתי שמטרתו עשייה למען<br>
+
+                <br>
+            </div>
+             <div class="text5"> <br><br><br>
+             <h1>בוגרים</h1>
+                "מסלול" הינו מיזם משותף לבוגרים-צעירים בגילאי 18-30 של בית הגלגלים<br>
+                והשירות לשיקום בקהילה באגף השיקום במשרד הרווחה.  תכנית דו-שנתית<br>
+                להכשרה ותמיכה בצעדים הראשונים בהשתלבות בחברה תוך ניהול עצמי<br>
+                מסלול כולל פגישה קבוצתית שבועית בת 5 שעות, לצד צמיחה אישית <br>
+                באמצעות הנחייה פרטנית שבועית בת שעתיים.<br>
+                <br>
+            </div>
+
+             <div class="img1"><img src="{{ url_for('activity.static', filename='media/imgg1.jpg')}}" alt=""width="auto" height="450"></div>
+             <div class="img2"><img src="{{ url_for('activity.static', filename='media/imgg2.jpg')}}"  alt=""width="auto" height="400"></div>
+             <div class="img3"><img src="{{ url_for('activity.static', filename='media/imgg3.jpg')}}"  alt=""width="auto" height="400"></div>
+             <div class="img4"><img src="{{ url_for('activity.static', filename='media/imgg4.jpg')}}"  alt=""width="auto" height="400"></div>
+             <div class="img5"><img src="{{ url_for('activity.static', filename='media/imgg5.jpg')}}" alt=""width="auto" height="400"></div>
+
+             <div class="activity" item="botom2"  onmouseover="bgchange(this)" onmouseout="bgnormal(this)">
+             <a class="a"  href="{{ url_for('Hot_activities.index') }}">  פעליות חמות ומחכות לתרומתכם   </a>
+             </div>
+        </div>
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('activity.static', filename='js/HoverJS.js') }}"></script>
+{% endblock %}
+

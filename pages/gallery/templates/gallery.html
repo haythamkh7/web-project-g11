@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'gallery' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('gallery.static', filename='css/gallery.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+     <div class="grid-container">
+             {% include 'header.html' %}
+             <div class="h1"><br><br><br><h1 class="h1">לתמונות שלנו</h1></div>
+            </div>
+            <div class="maqrees">
+                <marquee loop class="maqree1" behavior="scroll" direction="left"  >
+                    <img src="{{ url_for('gallery.static', filename='media/img16.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img15.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img14.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img13.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img12.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img11.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img10.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img9.jpeg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img7.jpg')}}"  width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img8.jpg')}}"  width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/imgg1.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/imgg2.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/imgg3.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/imgg4.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/imgg5.jpg')}}" width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img2.jpg')}}"  width="500" height="500" />
+                    <img src="{{ url_for('gallery.static', filename='media/img3.jpg')}}"  width="500" height="500" alt="Natural" />
+                    <img src="{{ url_for('gallery.static', filename='media/img4.jpg')}}"  width="500" height="500" alt="Natural" />
+
+                  </marquee>
+                </div>
+
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('gallery.static', filename='js/gallery.js') }}"></script>
+{% endblock %}

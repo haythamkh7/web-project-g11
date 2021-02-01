@@ -8,24 +8,24 @@
 </head>
 <body>
 
-                <div class="item1"> <a class="a" href="{{ url_for('hello_home') }}"><img src="{{ url_for('static', filename='img/logoo.jpg')}}" width="170" height="80" style="position: relative ;border-radius: 8px;"/></a></div>
+                <div class="item1"> <a class="a" href="{{ url_for('homepage.redirect_homepage') }}"><img src="{{ url_for('static', filename='img/logoo.jpg')}}" width="170" height="80" style="position: relative ;border-radius: 8px;"/></a></div>
                 <div class="item2">מי אנחנו
-                <div class="item13"><a class="a" href="{{ url_for('AboutUs') }}">אודות</a></div>
-                <div class="item14"><a class="a" href="{{ url_for('Officials') }}">בעלי תפקידים</a></div>
+                <div class="item13"><a class="a" href="{{ url_for('About_Us.index') }}">אודות</a></div>
+                <div class="item14"><a class="a" href="{{ url_for('Officials.index') }}">בעלי תפקידים</a></div>
                 </div>
                 <div class="item3">התנדבות
-                <div class="item15"><a class="a" href="{{ url_for('OurVolunteers') }}"> המתנדבים שלנו</a></div>
-                <div class="item16"><a class="a" href="{{ url_for('ToVolunteer') }}"> להתנדבות </a></div>
+                <div class="item15"><a class="a" href="{{ url_for('Our_Volunteers.index') }}"> המתנדבים שלנו</a></div>
+                <div class="item16"><a class="a" href="{{ url_for('To_Volunteer.index') }}"> להתנדבות </a></div>
                 </div>
-                <div class="item4"><a class="a" href="{{ url_for('Donators') }}"> תרומה </a></div>
-                <div class="item5"><a class="a" href="{{ url_for('activity') }}"> פעילויות </a></div>
+                <div class="item4"><a class="a" href="{{ url_for('Donators.index') }}"> תרומה </a></div>
+                <div class="item5"><a class="a" href="{{ url_for('activity.index') }}"> פעילויות </a></div>
                 <div class="item6">טפסים
-                <div class="item17"><a class="a" href="{{ url_for('Reports') }}">  דוחות כספיים </a></div>
-                <div class="item18"><a class="a" href="{{ url_for('Reports') }}">  אישורים  </a></div>
+                <div class="item17"><a class="a" href="{{ url_for('Reports.index') }}">  דוחות כספיים </a></div>
+                <div class="item18"><a class="a" href="{{ url_for('Reports.index') }}">  אישורים  </a></div>
                 </div>
-                <div class="item7"><a class="a" href="{{ url_for('gallery') }}">  גלריה  </a></div>
-                <div class="item9"><a class="a" href="{{ url_for('Contactus') }}"> צור קשר </a></div>
-                <div class="item10"><a class="a" href="{{ url_for('map') }}"> מפת הגעה  </a></div>
+                <div class="item7"><a class="a" href="{{ url_for('gallery.index') }}">  גלריה  </a></div>
+                <div class="item9"><a class="a" href="{{ url_for('Contact_us.index') }}"> צור קשר </a></div>
+                <div class="item10"><a class="a" href="{{ url_for('map.index') }}"> מפת הגעה  </a></div>
                 <div class="item11"><a href="https://www.facebook.com/HouseofWheels" class="button2"><img src="{{ url_for('static', filename='img/facebook.png')}}" width="40" height="40" style="position: relative;"/></a></div>
                 <div class="item12"><img src="{{ url_for('static', filename='img/Instegram logo.jfif')}}" width="40" height="40" style="position: relative;"/></div>
 

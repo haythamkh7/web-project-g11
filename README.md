@@ -14,7 +14,7 @@ You may want to modify some of the configurations and files as needed.
 flask, lean, skeleton, project, structure, environment, setup, template, fullstack, web, development, app, university, education.
 ###
 
-##### By Barak Pinchovski
+##### By beitgalgalim
 [LinkedIn](https://www.linkedin.com/in/barakpinch/)
 ##
  

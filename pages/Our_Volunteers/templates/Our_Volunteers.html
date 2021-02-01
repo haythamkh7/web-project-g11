@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Our_Volunteers' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('Our_Volunteers.static', filename='css/Our_Volunteers.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <div class="grid-container">
+         {% include 'header.html' %}
+         <div class="img1"><br><br><img src="{{ url_for('Our_Volunteers.static', filename='media/Our Volunteers1.jpg')}}" alt="" width="auto" height="300"></div>
+         <div class="text"><br><br><br><br><br>
+            עקב כך שחניכי העמותה דורשים תשומת לב רבה, דרושים מספר מתנדבים וחונכים הזהה למספר החניכים.
+            <br><br>
+            בעמותה קיימים 450 חונכים הנחשבים לכוח העלית של העמודה והם מתחייבים של שנתיים לפחות שיכולה להימשך כיותר מכך.
+            <br><br>
+            העבודה המשותפת של המדריכים והחניכים ב"בית הגלגלים" עיצבה קהילה תומכת ומעשירה בה יש מקום שווה לנכה לצד הבריא, לדתי לצד החילוני ולערבי לצד היהודי
+        </div>
+   </div>
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('Our_Volunteers.static', filename='js/page_error_handlers.js') }}"></script>
+{% endblock %}

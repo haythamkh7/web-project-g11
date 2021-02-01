@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'map' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('map.static', filename='css/map.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+      <div class="grid-container">
+              {% include 'header.html' %}
+                <br><br><br>
+            <div class="titel2">אך להגיע</div>
+            <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.244165396078!2d34.81360367029532!3d31.226493390826985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x62b297766f6fd0f0!2z15HXmdeqINeh16TXqCDXnNeg15TXmdeS15QgItei15wg15LXnNeS15zXmdedIiAtINeh16DXmdejINeR15DXqCDXqdeR16I!5e0!3m2!1siw!2sil!4v1607958687811!5m2!1siw!2sil"
+                width="840" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+             </div>
+        </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('map.static', filename='js/map.js') }}"></script>
+{% endblock %}

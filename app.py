@@ -1,148 +1,61 @@
-from urllib import request
+from flask import Flask
 
-from flask import Flask, render_template, redirect
-import mysql.connector
+
 ###### App setup
 app = Flask(__name__)
-
-###### Pages
-## Homepage
-from pages.homepage.homepage import homepage
-app.register_blueprint(homepage)
-
-## About
-from pages.about.about import about
-app.register_blueprint(about)
-
-## Catalog
-from pages.catalog.catalog import catalog
-app.register_blueprint(catalog)
-
-## Page error handlers
-from pages.page_error_handlers.page_error_handlers import page_error_handlers
-app.register_blueprint(page_error_handlers)
-
-
-###### Components
-## Main menu
-from components.main_menu.main_menu import main_menu
-app.register_blueprint(main_menu)
-
-def interact_db(query, query_type: str):
-    return_value = False
-    connection = mysql.connector.connect(host='localhost',user='root',PASSWORD='1234',database='group11')
-    cursor =connection.cursor(named_tuple=True)
-    cursor.execute(query)#Query operations
-
-    if query_type == 'commit':
-        #use for selet add update
-        connection.commit()
-        return_value =True
-
-    if query_type == 'fetch':
-        query_resulte =cursor.fetchall()
-        return_value =query_resulte
-
-    connection.close()
-    cursor.close()
-    return return_value
-
-
-
-@app.route('/')
-def hello_home():
-    return render_template('Home page.html')
-
-@app.route('/About Us')
-def AboutUs():
-    return render_template('About Us.html')
-
-@app.route('/activity')
-def activity():
-    return render_template('activity.html')
-
-@app.route('/base')
-def base():
-    return render_template('base.html')
-
-@app.route('/Contact us')
-def Contactus():
-    return render_template('Contact us.html')
-
-@app.route('/credit_card')
-def credit_card():
-    return render_template('credit_card.html')
-
-@app.route('/Donators')
-def Donators():
-    return render_template('Donators.html')
-
-@app.route('/gallery')
-def gallery():
-    return render_template('gallery.html')
-
-@app.route('/Hot activities')
-def Hotactivities():
-    return render_template('Hot activities.html')
-
-@app.route('/map')
-def map():
-    return render_template('map.html')
-
-@app.route('/Officials')
-def Officials():
-    return render_template('Officials.html')
-
-@app.route('/Our Volunteers')
-def OurVolunteers():
-    return render_template('Our Volunteers.html')
-
-@app.route('/Reports')
-def Reports():
-    return render_template('Reports.html')
-
-@app.route('/timer')
-def timer():
-    return render_template('timer.html')
-
-@app.route('/To Volunteer')
-def ToVolunteer():
-    if request.method == 'POST':
-        firstname = request.form['firstname']
-        lastName = request.form['lastName']
-        email = request.form['email']
-        subject = request.form['subject']
-        phone = request.form['phone']
-        start = request.form['start']
-        gender = request.form['gender']
-        question = request.form['question']
-        message = request.form['message']
-        query = "INSERT INTO users(firstname,lastName ,email,subject,phone,start,gender,question,message) VALUSE('%s','%s','%s','%s','%s','%s','%s','%s','%s') " %(firstname,lastName ,email,subject,phone,start,gender,question,message)
-        interact_db(query=query,query_type='commit')
-
-    return render_template('To Volunteer.html',req_method=request.method)
-
-@app.route('/delete_user',methods=['GET','POST'])
-def delete_user():
-    if request.method =='GET' :
-        email =request.args['email']
-        query = "DELETE FROM  users WHERE  email ='%s';" % email
-        interact_db(query=query,query_type='commit')
-        return redirect('/To Volunteer')
-
-
-
-
-
-
-@app.route('/allusers')
-def allusers():
-
-    query ="select * from users"
-    query_result =interact_db(query,query_type='fetch')
-    return render_template('To Volunteer.html' ,users=query_result)
+app.config.from_pyfile('settings.py')
 
 if __name__ == '__main__':
     app.run()
+
+###### Pages
+from pages.homepage.homepage import homepage
+app.register_blueprint(homepage)
+
+from pages.activity.activity import activity
+app.register_blueprint(activity)
+
+from pages.credit_card.credit_card import credit_card
+app.register_blueprint(credit_card)
+
+from pages.Donators.Donators import Donators
+app.register_blueprint(Donators)
+
+from pages.gallery.gallery import gallery
+app.register_blueprint(gallery)
+
+from pages.map.map import map
+app.register_blueprint(map)
+
+from pages.Officials.Officials import Officials
+app.register_blueprint(Officials)
+
+from pages.Reports.Reports import Reports
+app.register_blueprint(Reports)
+
+from pages.Our_Volunteers.Our_Volunteers import Ourvolunteers
+app.register_blueprint(Ourvolunteers)
+
+from pages.About_Us.About_Us import About_Us
+app.register_blueprint(About_Us)
+
+from pages.Contact_us.Contact_us import Contactus
+app.register_blueprint(Contactus)
+
+from pages.Hot_activities.Hot_activities import Hotactivities
+app.register_blueprint(Hotactivities)
+
+from pages.To_Volunteer.To_Volunteer import ToVolunteer
+app.register_blueprint(ToVolunteer)
+
+from pages.timer.timer import timer
+app.register_blueprint(timer)
+
+
+from components.main_menu.main_menu import main_menu
+app.register_blueprint(main_menu)
+
+from pages.page_error_handlers.page_error_handlers import page_error_handlers
+app.register_blueprint(page_error_handlers)
 
 

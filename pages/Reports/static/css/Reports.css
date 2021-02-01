@@ -1,5 +1,5 @@
 * {
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,7 +39,7 @@
 }
 .item2{
     grid-area: 1/2/2/3;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -54,7 +54,7 @@
 }
 .item3{
     grid-area: 1/3/2/4;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -67,7 +67,7 @@
 }
 .item4{
     grid-area: 1/4/2/5;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -81,7 +81,7 @@
 }
 .item5{
     grid-area: 1/5/2/6;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -94,7 +94,7 @@
 }
 .item6{
     grid-area: 1/6/2/7;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -108,7 +108,7 @@
 }
 .item7{
     grid-area: 1/7/2/8;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -128,7 +128,7 @@
 }
 .item9{
     grid-area: 10/1/11/2;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -178,7 +178,7 @@
 }
 .item10{
     grid-area: 10/2/11/3;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -206,7 +206,7 @@
 .item13{
 display: none;
 grid-area: 1/6/2/7;
-background:rgba(255,250,230);
+background:rgb(255,250,230);
 text-align: center;
 font-weight: bold;
 font-size: 18px;
@@ -229,7 +229,7 @@ border-radius: 8px;
 .item14{
     display: none;
     grid-area: 1/6/2/7;
-    background:rgba(255,250,230);
+    background:rgb(255,250,230);
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -250,7 +250,7 @@ border-radius: 8px;
     }
     .item15{
         display: none;
-        background:rgba(255,250,230);
+        background:rgb(255,250,230);
         text-align: center;
         font-weight: bold;
         font-size: 18px;
@@ -272,7 +272,7 @@ border-radius: 8px;
         }
     .item16{
          display: none;
-         background:rgba(255,250,230);
+         background:rgb(255,250,230);
          text-align: center;
         font-weight: bold;
         font-size: 18px;
@@ -294,7 +294,7 @@ border-radius: 8px;
         }
         .item17{
             display: none;
-            background:rgba(255,250,230);
+            background:rgb(255,250,230);
             text-align: center;
             font-weight: bold;
             font-size: 18px;
@@ -316,7 +316,7 @@ border-radius: 8px;
             }
             .item18{
                 display: none;
-                background:rgba(255,250,230);
+                background:rgb(255,250,230);
                 text-align: center;
                 font-weight: bold;
                 font-size: 18px;
@@ -343,7 +343,7 @@ border-radius: 8px;
                     background: rgba(255, 255, 255, 0);
                     border: none;
                     color: black;
-                    margin: center;
+
                     margin-top: -25px;
                     font-weight: bold;
                     text-decoration: none;

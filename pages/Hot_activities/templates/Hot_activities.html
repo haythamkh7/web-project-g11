@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Hot_activities' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('Hot_activities.static', filename='css/Hot_activities.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+   <div class="grid-container">
+            {% include 'header.html' %}
+
+             {% if  timers %}
+
+                   {% for timer in timers %}
+
+                       <div class="activity{{ timer.random_Id}}">
+                       <h4 style="font-size: 40px"> {{timer.activity_name}}</h4>
+                     <h5> the cost: {{ timer.amount }}</h5>
+                     <h6>until : {{ timer.untildate }}</h6>
+                     <div class="iframe{{ timer.random_Id }}"><iframe width="540" height="250" src="{{ url_for('timer.index',untildate= timer.untildate ) }}" frameborder="0"></iframe></div>
+                      <div class="bottom{{ timer.random_Id }}" onmouseover="bgchange5(this)" onmouseout="bgnormal5(this)">
+                      <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" id= "{{timer.random_Id}}" href="{{ url_for('credit_card.indexs', id= timer.random_Id ,cost= timer.amount  ) }}"> לתרומה מאובטחת </a>
+                       </div>
+                       </div>
+                    <br><br><br><br><br><br><br>
+                   {% endfor %}
+               {% endif %}
+   <br><br><br><br><br><br><br>
+            </div>
+
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('static', filename='js/HoverJS.js') }}"></script>
+{% endblock %}

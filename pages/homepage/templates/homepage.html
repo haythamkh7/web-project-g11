@@ -1,7 +1,51 @@
 {% extends 'base.html' %}
 
-{% set page_head_title = 'Homepage' %}
+{% set page_head_title = 'homepage' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('homepage.static', filename='css/homepage.css') }}"/>
+{% endblock %}
 
 {% block page_body_main_content %}
-    Welcome!
+   <div class="grid-container">
+              {% include 'header.html' %}
+            <div class="maqree"><br><br>
+            <video    autoplay loop src="{{ url_for('homepage.static', filename='media/video.mp4')}}" width="100%" height="350px "  ></video>
+            </div>
+            <div class="text"><br><br><br>
+            <h1>מי אנחנו</h1><br>
+                בית הגלגלים הוא ארגון ארצי לצעירים ובוגרים עם מוגבלות פיזית, הכולל<br>
+                ששה בתים הפתוחים לאוכלוסיות שונות מכל חלקי החברה הישראלית   <br>
+                הארגון מקיים בעזרת מתנדבים מסורים מסגרת רציפה לחניכים מגיל 9, דרך <br>
+                ההתבגרות ובמהלך הבגרות, עם מגוון תכניות ופעילויות, במטרה לאפשר<br>
+                רכישת מיומנויות חברתיות, אינטראקציות בינאישיות וקידום השתתפות<br>
+                חברתית ואזרחית בכל מעגלי החברה<br><br><hr>
+            </div>
+            <div class="program"><br><br><br><img src="{{ url_for('homepage.static', filename='media/program.jpg')}}" alt="" width="auto" height="500px"></div>
+
+            <div class="botom" item="bttom"  onmouseover="bgchange(this)" onmouseout="bgnormal(this)">
+                <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" href="{{ url_for('activity.index') }}"> לפעילויות נוספות </a>
+            </div>
+
+            <div class="program2" ><br><br><br><img class="img" src="{{ url_for('homepage.static', filename='media/photo1.jpg')}}" alt="" width="auto" height="300px"></div>
+
+            <div class="botom1" item="botom1"  onmouseover="bgchange(this)" onmouseout="bgnormal(this)">
+                <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" href="{{ url_for('Donators.index') }}"> איך אפשר לתרום </a>
+            </div>
+
+            <div class="botom2" item="botom2"  onmouseover="bgchange(this)" onmouseout="bgnormal(this)">
+                <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" href="{{ url_for('To_Volunteer.index') }}"> איך אפשר להתנדב </a>
+            </div>
+
+
+     </div>
 {% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('static', filename='js/HoverJS.js') }}"></script>
+{% endblock %}
+
+
+

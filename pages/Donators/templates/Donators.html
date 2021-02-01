@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Donators' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('Donators.static', filename='css/Donators.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+     <div class="grid-container">
+             {% include 'header.html' %}
+            <div class="img"><img src="{{ url_for('Donators.static', filename='media/Donators.jpg')}}" alt="" width="auto" height="280" ></div>
+            <div class="text"> <br><br><br>
+                מפעילות העמותה נהנים בכל שנה כ-470 ילדים ובוגרים אשר פועלים  באמצעות צוות מדריכים מסור ומיוחד<br>
+                כ-500 מתנדבים חילונים ודתיים, ערבים ויהודים, המגיעים ממקומות שונים בארץ ומיצגים קשת  מקצועית<br>
+                ואידיאולוגית ופועלים תוך הרמוניה ועבודה משותפת <br>
+            </div>
+            <div class="pay"><img src="{{ url_for('Donators.static', filename='media/pay.jpg')}}" alt="" width="auto" height="350" ></div>
+
+            <div class="botom" onmouseover="bgchange4(this)" onmouseout="bgnormal4(this)">
+            <a class="a" onmouseover="textchange(this)" onmouseout="textnormal(this)" href="{{ url_for('credit_card.index') }}"> לתרומה מאובטחת </a>
+            </div>
+            </div>
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('static', filename='js/HoverJS.js') }}"></script>
+{% endblock %}
