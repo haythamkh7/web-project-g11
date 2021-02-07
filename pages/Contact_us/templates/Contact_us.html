@@ -11,34 +11,32 @@
              {% include 'header.html' %}
             <div class="item8">אנא מלאו את הטופס ונשמח ליצור אתכם קשר בהקדם</div>
 
-
             <div class="item9">
-             <form class="input_form"  action="{{ url_for('Contact_us.inserts') }}" method="POST">
-
             <div id="error_message"></div>
-               <div class="txtb" >
+             <form class="input_form" name="input_form" action="{{ url_for('Contact_us.inserts') }}" onsubmit="return Contact_usvalidate()" method="POST">
+            <div class="txtb" >
             <label class="area">שם פרטי</label><br>
             <input type="text" id="firstname" name="first_name"  placeholder="הכנס שם פרטי " class="input"><br><br>
             </div>
 
             <div class="txtb" >
             <label class="area">שם משפחה</label><br>
-            <input type="text" id="last_name" name="last_name" placeholder="הכנס שם משפחה " class="input"><br><br>
+            <input type="text" id="last_name" name="last_name"  placeholder="הכנס שם משפחה " class="input"><br><br>
             </div>
 
             <div class="txtb" >
             <label for="כתובת אימייל" class="area">כתובת אימייל</label><br>
-            <input type="email" id="email" name="email" placeholder="הכנס אימייל  " class="input"><br><br>
+            <input type="email" id="email" name="email"  placeholder="הכנס אימייל  " class="input"><br><br>
             </div>
 
             <div class="txtb" >
             <label for="נושא הפניה"class="area">נושא הפניה</label><br>
-            <input type="text" id="subject" name="subject" placeholder=" נושה הפניה  " class="input"><br><br>
+            <input type="text" id="subject" name="subject"  placeholder=" נושה הפניה  " class="input"><br><br>
             </div>
 
             <div class="txtb" >
             <label for="מס' טלפון נייד"class="area">מס' טלפון נייד</label><br>
-            <input type="text" id="phone" name="phone" placeholder="מס' טלפון נייד"class="input"><br><br>
+            <input type="text" id="phone" name="phone"  placeholder="מס' טלפון נייד"class="input"><br><br>
             </div>
             </div>
 
@@ -51,12 +49,11 @@
 
             <div class="submit">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <div class="btn" >
-                <input type="submit" name="insert"  value="insert" onclick="alert('The user was Inserted')">
-{#                <button type="button" class="button" value="submit form" onclick="validate(phone)">Send</button>#}
+            <div>
+                <button class="btn" type="submit" id="insert"  name="insert"  value="insert" >insert </button>
             </div>
-                <div class="btn" >
-                <input type="submit" name="update" value="update" onclick="alert('The user was updated')">
+                <div>
+                <button class="btn" type="submit"  name="update" value="update" onclick="alert('The user was updated')">update </button>
                  </form>
             </div>
 

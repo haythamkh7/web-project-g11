@@ -110,18 +110,18 @@ body{
     font-size: 14px;
     transition: all 0.5s ease;
   }
-  .contact-box .btn input[type="submit"]{
-    border: 0px;
-    margin-top: 15px;
-    padding: 10px;
+
+.btn{
+    background-color: #64b0ff;
+    border: none;
+      color: white;
+    padding: 10px 30px;
     text-align: center;
-    width: 100%;
-    background: #fece0c;
-    color: #332902;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
     font-weight: bold;
-    border-radius: 25px;
     cursor: pointer;
   }
   .contact-box .back input[type="submit"]{

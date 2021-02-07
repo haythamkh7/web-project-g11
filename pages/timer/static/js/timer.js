@@ -1,10 +1,9 @@
 
 $(document).ready(function() {
-
 	// Create new jQuery function to handle countdown
 	(function($) {
 		$.fn.countdown = function(endDate) {
-			var _this = $(this);	
+			var _this = $(this);
 
 			// Used to add leading zero if number has less than 1 character
 			function addLeadZero(num){
@@ -49,6 +48,7 @@ $(document).ready(function() {
 			// Set countdown display
 			function updateCountdown(endDate) {
 				var countData = getCounterData(endDate);
+              	  console.log("**********");
 
 				_this.find(".days").text(countData.days);
 				_this.find(".hours").text(countData.hours);
@@ -59,9 +59,9 @@ $(document).ready(function() {
 				if (countData.time < 1000){
 		  			endCountdownAlert();
 		  		}
-					
+
 			}
-			
+
 			// Set interval, run updateCountdown every second until specified endDate
 			interval = setInterval(updateCountdown, 1000, endDate);
 
@@ -69,10 +69,9 @@ $(document).ready(function() {
 			return _this;
 		}
 	}) (jQuery);
-
 	// Run countdown function
 	 $("#countdown").countdown("2021/02/21 23:59:59");
 
 
-  
+
 });

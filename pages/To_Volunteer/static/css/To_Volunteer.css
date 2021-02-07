@@ -11,6 +11,10 @@
     grid-template-rows: 20px 80px 100px 700px 90px 40px;
     border: 1px solid gray;margin: 8px 0 ; padding: 12px 18px;border-radius: 8px;
     }
+.Delete_form .delete{
+
+    grid-area: 5/4/6/5;
+}
     .a{
         color: black;
         background-color: rgba(255, 255, 255, 0);
@@ -346,20 +350,19 @@
                 font-size: 14px;
                 transition: all 0.5s ease;
               }
-              .grid-container .btn input[type="submit"]{
-                border: 0px;
-                margin-top: 15px;
-                padding: 10px;
-                text-align: center;
-                width: 100%;
-                background: #fece0c;
-                color: #332902;
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                font-weight: bold;
-                border-radius: 25px;
-                cursor: pointer;
-              }
+                .btn{
+    background-color: #64b0ff;
+    border: none;
+      color: white;
+    padding: 10px 30px;
+    text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
               .button2{
                 background: rgba(255, 255, 255, 0);

@@ -10,13 +10,13 @@
     <div class="contact-box"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <h1>לתשלום</h1>
-        <div id="error_message"></div>
-        <form action="/insert" method="POST">
+      <form class="input_form" id="input_form" action="{{ url_for('credit_card.insert') }}" onsubmit="return credit_card_validate()" method="POST" >
 
+       <div id="error_message"></div>
         <div class="radio">
         <h2> פרטי תרומה</h2><br>
-        <input class="custom-input" name="donation_type" type="radio" >        תרומה חד פעמית
-        <input class="custom-input" name="donation_type" type="radio" >    רומה חודשית מתחדשת (הו"ק)
+        <input id="donation_type" name="donation_type" type="radio" value="One-time donation">        תרומה חד פעמית
+        <input id="donation_type" name="donation_type" type="radio" value="Monthly donation" >    רומה חודשית מתחדשת (הו"ק)
         </div>
 
         <div class="cost">
@@ -36,12 +36,12 @@
 
         <div class="txtb" >
         <label for="כתובת אימייל" class="label">כתובת אימייל</label>
-        <input type="email" name="email" placeholder="הכנס אימייל  " class="input">
+        <input type="text" name="email" placeholder="הכנס אימייל  " class="input">
         </div>
 
         <div class="txtb" >
         <label for="מס' טלפון נייד"class="label">מס' טלפון נייז</label>
-        <input type="number" name="phone" placeholder="מס' טלפון נייד"class="input">
+        <input type="text" name="phone" placeholder="מס' טלפון נייד"class="input">
         </div>
 
         <h4>פרטי כרטיס אשראי</h4>
@@ -52,13 +52,13 @@
 
         <div class="txtb" >
         <label class="label">מספר הכרטיס * </label>
-        <input  class="number" type="text" name="creditcard" placeholder="מספר הכרטיס" >
+        <input   type="text" name="creditcard" placeholder="מספר הכרטיס" class="input" >
         </div>
 
         <div class="txtb1">
         <label class="label"  name="validity">תוקף הכרטיס *</label>
         <p style="    color: #808000 ; font-size: 16px;font-weight: bolder; text-align: right;"> שנה</p>
-        <select class="expiration_year" >
+       <select name="expiration_year" >
         <option value="2021">2021</option>
         <option value="2022">2022</option>
         <option value="2023">2023</option>
@@ -70,9 +70,9 @@
         <option value="2029">2029</option>
         <option value="2030">2030</option>
         <option value="2031">2031</option>
-    </select>
+       </select>
         <p style="    color: #808000 ; font-size: 16px;font-weight: bolder; text-align: right;">חודש</p>
-        <select class="expiration_month" >
+       <select name="expiration_month" >
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -85,25 +85,24 @@
         <option value="10">10</option>
         <option value="11">11</option>
         <option value="12">12</option>
-
-    </select>
-         </div>
+       </select>
+       </div>
 
          <div class="txtb">
          <label class="label" > 3 ספרות בגב הכרטיס *</label>
-         <input class="input" type="number" name="ccv" placeholder="3 ספרות בגב הכרטיס " >
+         <input class="input" type="text" name="ccv" placeholder="3 ספרות בגב הכרטיס " >
          </div>
 
          <div class="txtb">
          <label class="label"> ת.ז. בעל/ת כרטיס *</label>
-         <input class="input" type="number" name="id" placeholder="ת.ז. בעל/ת כרטיס " >
+         <input class="input" type="text" name="id" placeholder="ת.ז. בעל/ת כרטיס " >
          </div>
 
-         <div class="btn" ><input type="submit"></div>
+         <button class="btn" type="submit" name="Insert" id="Insert" value="insert">submit</button>
          <div class="botom1"><a class="a" href="{{ url_for('Donators.index') }}">חזרה </a></div>
 
-         </form>
-         </div>
+    </form>
+   </div>
 {% endblock %}
 
 

@@ -23,7 +23,7 @@ def indexs(id,cost):
 @credit_card.route('/insert', methods=['GET','POST'])
 def insert():
     if request.method == 'POST':
-        donation_type ='dd'
+        donation_type =request.form['donation_type']
         cost = request.form['cost']
         first_name = request.form['first_name']
         last_name = request.form['last_name']
@@ -31,8 +31,8 @@ def insert():
         phone = request.form['phone']
         myname = request.form['myname']
         creditcard = request.form['creditcard']
-        expiration_year = '2222'
-        expiration_month = '3'
+        expiration_year = request.form['expiration_year']
+        expiration_month = request.form['expiration_month']
         ccv = request.form['ccv']
         id = request.form['id']
         query2 = "INSERT INTO credit_card(Id,Email,first_Name,last_name,phone_number,amount,donation_type,cerdit_holder_name,card_number,expiration_year,expiration_month,ccv) values ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s') " % (id,email,first_name,last_name,phone,cost,donation_type,myname,creditcard,expiration_year,expiration_month,ccv)

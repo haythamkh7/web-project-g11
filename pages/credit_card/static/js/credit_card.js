@@ -1,43 +1,55 @@
-function validate(){
-    var cost = document.getElementById("cost").value;
-    var firstname = document.getElementById("firstname").value;
-    var lastName = document.getElementById("lastName").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var myname = document.getElementById("myname").value;
-    var creditcard = document.getElementById("creditcard").value;
-    var id = document.getElementById("id").value;
-    var ccv = document.getElementById("ccv").value;
 
+function credit_card_validate(){
+    alert("Form Submitted Successfully!");
+
+    const form = document.forms["input_form"];
+    const donation_type = form["donation_type"].value;
+    const cost = form["cost"].value;
+    const firstname = form["firstname"].value;
+    const lastName = form["lastName"].value;
+    const email = form["email"].value;
+    const phone = form["phone"].value;
+    const creditcard = form["creditcard"].value;
+    const id = form["id"].value;
+    const myname = form["myname"].value;
+    const ccv = form["ccv"].value;
     var error_message = document.getElementById("error_message");
-
     error_message.style.padding = "10px";
 
     var text;
 
     if(isNaN(cost) ){
+        alert("Sss");
       text = "Please Enter valid cost Number";
       error_message.innerHTML = text;
       return false;
     }
 
-    if(firstname.length < 1){
+   if (donation_type === "") {
+        text = "Please insert the donation_type";
+        error_message.innerHTML = text;
+        return false;
+    }
+
+    if(firstname.length << 1){
       text= "Please Enter valid firstname";
       error_message.innerHTML = text;
       return false;
     }
-    if(lastName.length < 1){
+
+    if(lastName.length << 1){
       text = "Please Enter Correct lastName";
       error_message.innerHTML = text;
       return false;
     }
-    if(email.indexOf("@") == -1 || email.length < 6){
+
+    if(email.indexOf("@") === -1 || email.length < 6){
         text = "Please Enter valid Email";
         error_message.innerHTML = text;
         return false;
       }
 
-    if(isNaN(phone) || phone.length != 10){
+    if(isNaN(phone) || phone.length !== 10){
       text = "Please Enter valid Phone Number";
       error_message.innerHTML = text;
       return false;
@@ -48,17 +60,20 @@ function validate(){
         error_message.innerHTML = text;
         return false;
       }
-      if(isNaN(creditcard) || creditcard.length != 16){
+
+    if(isNaN(creditcard) || creditcard.length !== 16){
         text = "Please Enter valid creditcard Number";
         error_message.innerHTML = text;
         return false;
       }
-      if(isNaN(ccv) || ccv.length != 3){
+
+    if(isNaN(ccv) || ccv.length !== 3){
         text = "Please Enter valid ccv Number";
         error_message.innerHTML = text;
         return false;
       }
-      if(isNaN(id) || id.length != 9){
+
+    if(isNaN(id) || id.length !== 9){
         text = "Please Enter valid id Number";
         error_message.innerHTML = text;
         return false;

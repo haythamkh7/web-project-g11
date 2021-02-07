@@ -9,7 +9,7 @@
 {% block page_body_main_content %}
      <div class="grid-container">
              {% include 'header.html' %}
-            <div class="img"><img src="{{ url_for('Donators.static', filename='media/Donators.jpg')}}" alt="" width="auto" height="280" ></div>
+            <div class="img"><img src="{{ url_for('Donators.static', filename='media/donations.jpg')}}" alt="" width="auto" height="280" ></div>
             <div class="text"> <br><br><br>
                 מפעילות העמותה נהנים בכל שנה כ-470 ילדים ובוגרים אשר פועלים  באמצעות צוות מדריכים מסור ומיוחד<br>
                 כ-500 מתנדבים חילונים ודתיים, ערבים ויהודים, המגיעים ממקומות שונים בארץ ומיצגים קשת  מקצועית<br>
@@ -26,5 +26,5 @@
 
 
 {% block page_body_js %}
-    <script src="{{ url_for('static', filename='js/HoverJS.js') }}"></script>
+    <script src="{{ url_for('Donators.static', filename='js/Donators.js') }}"></script>
 {% endblock %}

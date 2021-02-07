@@ -10,63 +10,70 @@
      <div class="grid-container">
              {% include 'header.html' %}
              <div class="item8">אנא מלאו את הטופס ונשמח ליצור אתכם קשר בהקדם</div>
-             <div class="item9"><div id="error_message"></div>
 
 
-         <form   method="POST" action="/get" >
+           <div class="item9">
+            <form class="input_form" id="input_form" action="{{ url_for('To_Volunteer.get') }}" onsubmit="return validate()" method="POST">
 
+             <div id="error_message"></div>
              <div class="txtb" >
              <label class="area">שם פרטי</label><br>
              <input type="text" name="first_name" placeholder="הכנס שם פרטי " class="input"><br><br>
              </div>
 
-             <div class="txtb" >
+             <div class="txtb">
              <label class="area">שם משפחה</label><br>
              <input type="text" name="last_name" placeholder="הכנס שם משפחה " class="input"><br><br>
              </div>
 
-             <div class="txtb" >
+             <div class="txtb">
              <label for="כתובת אימייל" class="area">כתובת אימייל</label><br>
              <input type="email" name="email" placeholder="הכנס אימייל  " class="input"><br><br>
              </div>
 
-             <div class="txtb" >
+             <div class="txtb">
              <label for="נושא הפניה"class="area">נושא הפניה</label><br>
              <input type="text" name="subject" placeholder=" נושה הפניה  " class="input"><br><br>
              </div>
 
-             <div class="txtb" >
+             <div class="txtb">
              <label for="מס' טלפון נייד"class="area">מס' טלפון נייד</label><br>
              <input type="phone" name="phone" placeholder="מס' טלפון נייד"class="input"><br><br>
              </div>
 
-             <div class="txtb" >
+             <div class="txtb">
              <label class="area">תאריך לידה</label><br>
              <input type="date" name="start" name="תאריך לידה" class="area" value="0000-00-00" min="1995-01-01" max="2002-12-31"><br><br>
-             </div></div>
+             </div>
+           </div>
 
              <div class="item10">
              <div class="txtb" >
              <h2>מין:</h2>
-             <input type="radio" id="male" name="gender" value="male">Male
-             <input type="radio" id="female" name="gender" value="female">Female
+             <input type="radio" id="gender" name="gender" value="M">Male
+             <input type="radio" id="gender" name="gender" value="F">Female
              </div>
 
              <div class="txtb" >
              <h2 > האם יש נסיון התנדבותי עם בעלי מוגבלות :</h2>
-             <input type="radio" id="yes" name="question" value="yes" > כן
-             <input type="radio" id="no" name="question" value="no"> לא
+             <input type="radio" id="question" name="question" value="yes" > כן
+             <input type="radio" id="question" name="question" value="no"> לא
              </div>
 
-
+         <button  class="btn" type="submit" name="Insert"  value="Insert" >Insert</button>
+        </form>
+          <form class="Delete_form" id="Delete_form" action="{{ url_for('To_Volunteer.Delete') }}"  method="POST">
+                <div class="delete" >
+                <button  class="btn" type="submit" name="Delete" value="Delete" >Delete</button>
+                </div>
+      </form>
+ </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <div class="btn" >
-                <input type="submit" name="actions"  value="Insert" onclick="alert('The user was Inserted')">
-            </div>
-                <div class="btn" >
-                <input type="submit" name="actions" value="Delete" onclick="alert('The user was deleted')">
-    </div>
-                 </form>
+
+
+
+
+
 
  </div>
 {% endblock %}
